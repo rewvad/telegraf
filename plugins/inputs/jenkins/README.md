@@ -44,6 +44,9 @@ This plugin does not require a plugin on jenkins and it makes use of Jenkins API
   ## Nodes to exclude from gathering
   # node_exclude = [ "node1", "node2" ]
 
+  ## Labels to include for gathering
+  # lable_include = ["lable1", "lable2"]
+
   ## Worker pool for jenkins plugin only
   ## Empty this field will use default value 5
   # max_connections = 5
@@ -75,6 +78,14 @@ This plugin does not require a plugin on jenkins and it makes use of Jenkins API
   - fields:
     - duration
     - result_code (0 = SUCCESS, 1 = FAILURE, 2 = NOT_BUILD, 3 = UNSTABLE, 4 = ABORTED)
+
+- lable_include:
+  - tags:
+    - name
+  - fields:
+    - total_executors
+    - idle_executors
+    - busy_executors
 
 ### Sample Queries:
 
